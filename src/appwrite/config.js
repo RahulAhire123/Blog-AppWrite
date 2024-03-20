@@ -124,12 +124,10 @@ export class Service{
         }
     }
 
-    getFilePreview(fileId){
-        return this.bucket.getFilePreview(
-            conf.appwriteBucketId,
-            fileId.toString()
-        )
-    }
+    getFilePreview(fileId) {
+    const pp=fileId.toString();
+    return this.bucket.getFilePreview(conf.appwriteBucketId, pp);
+  }
 }
 
 
